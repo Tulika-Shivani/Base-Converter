@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task2</title>
+    <SCRIPT LANGUAGE="JavaScript"></SCRIPT>
+    <meta name="viewport",content="width=device-width",initial-scale=1>
+    
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #nav
+        {
+          display:inline-block;
+          text-align: center;
+          background: black;
+          height: 50%;
+          width:100%;
+          margin:5px;
+        }
+        p
+        {
+            color:cornflowerblue;
+            align-content: center;
+            font-size: 30px;
+        }
+        #i
+        {
+            height:75%;
+            width:50%;
+        
+            margin-top:20%;
+            margin-bottom:50%;
+            margin-left:40%;
+            margin-right: 40%;
+            justify-content: center;
+            display:inline-block;
+
+        }
+        #i1 #i2 #i3 #i5
+        {
+            color: black;
+            font-size : 20px;
+            text-align:center;
+            border-style: outset;
+            margin:40px;
+            height:20%;
+            width:50%;
+
+
+
+        }
+        ::placeholder
+        {
+            color:gray;
+        }
+        
+
+
+
+    </style>
+    </head>
+    
+    <body>
+        <div id="nav">
+            <p>Calculator</p>
+        </div>
+        <div id="i">
+        <div id="i1">
+            <input type="number" placeholder="Enter the value">
+        </div>
+        <div id="i2">
+                <input placeholder="From Base" type="number">
+        </div>
+        <div id="i3">
+                <input placeholder="To Base" type="number">
+        </div>
+        <div id="i4">
+            
+            <input type="submit"  value="submit" >
+        </div>
+                
+             <div id="i5">   
+                
+                <input placeholder="Converted Value" type="number">
+            
+        </div>
+        </div>
+        <div id="j">
+            
+                <button type="button">Base Conversion</button>
+                <button type ="button">Temperature Conversion</button>
+            
+        
+    </body>
+    <script>
+        function base_convert()
+        {   var number=document.getElementbyId('i1').value;
+            var initial_base=document.getElementbyId('i2').value;
+            var change_base=document.getElementbyId('i3').value;
+            if ((initial_base && change_base) <2 || (initial_base && change_base)>36)
+    
+    
+           var new_number=parseInt((number + '', initial_base).toString(change_base));
+          
+          document.getElementbyId('i5').innerhtml=new_number;
+          console.log(new_number);
+//number.addEventListener('input',base_convert);
+//initial_base.addEventListener('input',base_convert);
+//change_base.addEventListener('input',base_convert);
+            }
+    </script>
+</html> 
